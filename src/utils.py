@@ -4,6 +4,7 @@ import re
 from nltk.corpus import stopwords
 from src.exception import CustomException
 from src.logger import logging
+import tensorflow
 from tensorflow.keras.preprocessing.text import one_hot
 from tensorflow.keras.preprocessing import sequence
 

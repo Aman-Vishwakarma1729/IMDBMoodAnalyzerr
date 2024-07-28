@@ -8,6 +8,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from src.utils import padding, clean_text, remove_stopwords, one_hot_encoding
 from nltk.tokenize import word_tokenize
+import tensorflow
 from tensorflow.keras.models import load_model
 
 warnings.filterwarnings('ignore')
@@ -66,9 +67,12 @@ if st.button("Get Result"):
         if user_input.strip():
             X = preprocessing(user_input)
             prediction = model.predict(X)
-            sentiment = 'Poisitive' if prediction[0][0] >= 0.5 else 'Negative'
-            time.sleep(1) 
-            
+            print(prediction[0][0])
+            if prediction[0][0] >= 0.5:
+                sentiment = "Positive"
+            else:
+                sentiment = "Negative"
+    
             if sentiment == "Positive":
                 st.markdown(f"<p style='text-align: center; font-size: 34px; color: green'>{sentiment}</p>", unsafe_allow_html=True)
             elif sentiment == "Negative":
@@ -77,7 +81,7 @@ if st.button("Get Result"):
            st.write("Please enter a movie review.")
 
 
-st.markdown(f"<p style='text-align: center; font-size: 18px;'>Check out the code on <a href='https://github.com/Aman-Vishwakarma1729/Bug_Classifier'>GitHub</a></p>", unsafe_allow_html=True)
+st.markdown(f"<p style='text-align: center; font-size: 18px;'>Check out the code on <a href='https://github.com/Aman-Vishwakarma1729/IMDBMoodAnalyzerr'>GitHub</a></p>", unsafe_allow_html=True)
 
-# Create a copyright notice with a custom font size and color
+
 st.markdown(f"<p style='text-align: center; font-size: 12px;'>Copyright 2024 Aman Vishwakarma. All rights reserved.</p>", unsafe_allow_html=True)
