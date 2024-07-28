@@ -6,7 +6,7 @@
 ## Table of content
 --------------
 1. [Introduction](#introduction)
-2. [About Data](#about-data)
+2. [About Dataset](#about-data)
 3. [Tools and Techniques Used](#tools-and-techniques-used)
 4. [How to use](#how-to-use)
 
@@ -37,4 +37,4 @@ IMDBMoodAnalyzer is an advanced deeplearning project designed using Natural Lang
 - pip install -r requirements.txt
 - python main.py
 - streamlit run application.py
-* To understand the entire workflow got tot folder named 'research_notebooks' and go through the notebook in it.
+* To understand the entire workflow go to folder named 'research_notebooks' and go through the notebook in it.
