@@ -8,11 +8,12 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from src.utils import padding, clean_text, remove_stopwords, one_hot_encoding
 from nltk.tokenize import word_tokenize
-import tensorflow
 from tensorflow.keras.models import load_model
 
 warnings.filterwarnings('ignore')
 
+nltk.download('stopwords')
+nltk.download('punkt')
 
 model_path = os.path.join(os.getcwd(), 'models', 'movie_review_sentiment_analyzer_simple_rnn.h5')
 model = load_model(model_path)
@@ -67,7 +68,7 @@ if st.button("Get Result"):
         if user_input.strip():
             X = preprocessing(user_input)
             prediction = model.predict(X)
-            print(prediction[0][0])
+    
             if prediction[0][0] >= 0.5:
                 sentiment = "Positive"
             else:
