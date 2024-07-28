@@ -9,7 +9,7 @@ import tensorflow
 from tensorflow.keras.preprocessing.text import one_hot
 from tensorflow.keras.preprocessing import sequence
 
-
+nltk.download('stopwords')
 # cleaning data
 def clean_text(text):
     text = re.sub(r'<.*?>', '', text)         # Remove HTML tags
