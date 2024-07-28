@@ -6,6 +6,7 @@ import numpy as np
 import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+import nltk
 from src.utils import padding, clean_text, remove_stopwords, one_hot_encoding
 from nltk.tokenize import word_tokenize
 from tensorflow.keras.models import load_model
