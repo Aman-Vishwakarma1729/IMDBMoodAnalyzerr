@@ -6,7 +6,7 @@
 ## Table of content
 --------------
 1. [Introduction](#introduction)
-2. [About Dataset](#about-data)
+2. [About Dataset](#about-dataset)
 3. [Tools and Techniques Used](#tools-and-techniques-used)
 4. [How to use](#how-to-use)
 
